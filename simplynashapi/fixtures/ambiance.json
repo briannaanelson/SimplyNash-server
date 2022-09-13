@@ -1,0 +1,87 @@
+[
+    {
+        "model": "simplynashapi.ambiance",
+        "pk": 1,
+        "fields":{
+            "label": "Casual Dining"
+        }
+    },
+    {
+        "model":"simplynashapi.ambiance",
+        "pk":2,
+        "fields":{
+            "label":"Fine Dining"
+        }
+    },
+    {
+        "model":"simplynashapi.ambiance",
+        "pk":3,
+        "fields":{
+            "label":"First Date"
+        }
+    },
+    {
+        "model":"simplynashapi.ambiance",
+        "pk":4,
+        "fields":{
+            "label": "Birthday Dinner"
+        }
+    },
+    {
+        "model":"simplynashapi.ambiance",
+        "pk":5,
+        "fields":{
+            "label":"Kid-Friendly"
+        }
+    },
+    {
+        "model":"simplynashapi.ambiance",
+        "pk":6,
+        "fields":{
+            "label":"Family-Friendly"
+        }
+    },
+    {
+        "model":"simplynashapi.ambiance",
+        "pk":7,
+        "fields":{
+            "label":"Family Owned"
+        }
+    },
+    {
+        "model":"simplynashapi.ambiance",
+        "pk":8,
+        "fields":{
+            "label":"Tapas-Bar"
+        }
+    },
+    {
+        "model":"simplynashapi.ambiance",
+        "pk":9,
+        "fields":{
+            "label":"Pub"
+        }
+    },
+    {
+        "model":"simplynashapi.ambiance",
+        "pk":10,
+        "fields":{
+            "label":"Girls Night Out"
+        }
+    },
+    {
+        "model":"simplynashapi.ambiance",
+        "pk":11,
+        "fields":{
+            "label":"Ethnic"
+        }
+    },
+    {
+        "model":"simplynashapi.ambiance",
+        "pk":12,
+        "fields":{
+            "label":"Bistro"
+        }
+    }
+
+]

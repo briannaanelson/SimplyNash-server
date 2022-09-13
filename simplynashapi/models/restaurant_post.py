@@ -13,7 +13,7 @@ class RestaurantPost(models.Model):
     price = models.ForeignKey(Price, on_delete=models.CASCADE)
     image_url = models.URLField(max_length=500, default=None)
     description = models.CharField(max_length=500)
-    ambiance = models.ManyToManyField(Ambiance, through="RestaurantAmbiance", related_name="post")
-    food_type = models.ManyToManyField(FoodType, through="RestaurantFoodType", related_name="post")
+    ambiance = models.ManyToManyField(Ambiance, related_name="post")
+    food_type = models.ManyToManyField(FoodType, related_name="post")
     
     

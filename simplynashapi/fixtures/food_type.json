@@ -1,0 +1,108 @@
+[
+    {
+        "model": "simplynashapi.foodtype",
+        "pk": 1,
+        "fields":{
+            "label": "Traditional American"
+        }
+    },
+    {
+        "model": "simplynashapi.foodtype",
+        "pk": 2,
+        "fields":{
+            "label": "Southern"
+        }
+    },
+    {
+        "model": "simplynashapi.foodtype",
+        "pk": 3,
+        "fields":{
+            "label": "Middle Eastern"
+        }
+    },
+    {
+        "model": "simplynashapi.foodtype",
+        "pk": 4,
+        "fields":{
+            "label": "Mexican"
+        }
+    },
+    {
+        "model": "simplynashapi.foodtype",
+        "pk": 5,
+        "fields":{
+            "label": "Italian"
+        }
+    },
+    {
+        "model": "simplynashapi.foodtype",
+        "pk": 6,
+        "fields":{
+            "label": "Japanese"
+        }
+    },
+    {
+        "model": "simplynashapi.foodtype",
+        "pk": 7,
+        "fields":{
+            "label": "Greek"
+        }
+    },
+    {
+        "model": "simplynashapi.foodtype",
+        "pk": 8,
+        "fields":{
+            "label": "Hawaiian"
+        }
+    },
+    {
+        "model": "simplynashapi.foodtype",
+        "pk": 9,
+        "fields":{
+            "label": "Asian"
+        }
+    },
+    {
+        "model": "simplynashapi.foodtype",
+        "pk": 10,
+        "fields":{
+            "label": "Cajuan/Creole"
+        }
+    },
+    {
+        "model": "simplynashapi.foodtype",
+        "pk": 11,
+        "fields":{
+            "label": "Chinese"
+        }
+    },
+    {
+        "model": "simplynashapi.foodtype",
+        "pk": 12,
+        "fields":{
+            "label": "Soul Food"
+        }
+    },
+    {
+        "model": "simplynashapi.foodtype",
+        "pk": 13,
+        "fields":{
+            "label": "Vegan"
+        }
+    },
+    {
+        "model": "simplynashapi.foodtype",
+        "pk": 14,
+        "fields":{
+            "label": "BBQ"
+        }
+    },
+    {
+        "model": "simplynashapi.foodtype",
+        "pk": 15,
+        "fields":{
+            "label": "Seafood"
+        }
+    }
+
+]

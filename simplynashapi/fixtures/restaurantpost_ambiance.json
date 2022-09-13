@@ -1,0 +1,10 @@
+[
+    {
+        "model": "simplynashapi.restaurantpost_ambiance",
+        "pk": 1,
+        "fields":{
+            "restaurantpost" : 1,
+            "ambiance": 10
+        }
+    }
+]
