@@ -1,0 +1,16 @@
+[
+    {
+        "model":"simplynashapi.restaurantpost",
+        "pk":1,
+        "fields":{
+            "user": 1,
+            "name": "Pearl Diver",
+            "publication_date": "2022-09-11",
+            "address": "1008 Gallatin Ave",
+            "parking": 1,
+            "price": 3,
+            "image_url": "https://nashvilleguru.com/businesses/pearl-diver",
+            "description": "Very cute bar in East Nashville, great drinks!! Food not the best lol"
+        }
+    }
+]
