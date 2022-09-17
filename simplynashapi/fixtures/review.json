@@ -4,7 +4,7 @@
         "pk":1,
         "fields":{
             "restaurant_post": 1,
-            "user": 1,
+            "nashuser": 1,
             "content": "loved this place!",
             "created_on": "2022-09-11",
             "rating": 5

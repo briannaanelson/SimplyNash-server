@@ -4,13 +4,12 @@ from rest_framework.authtoken.models import Token
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
-
-from simplynashapi.models import NashUser
+from django.contrib.auth.models import User
 
 @api_view(['POST'])
 @permission_classes([AllowAny])
 def login_user(request):
-    '''Handles the authentication of a nashuser
+    '''Handles the authentication of a user
 
     Method arguments:
       request -- The full HTTP request object
@@ -54,12 +53,12 @@ def register_user(request):
     )
 
     # Now save the extra info in the simplynashapi_nashuser table
-    nashuser = NashUser.objects.create(
-        user=new_user
+    user = User.objects.create(
+        user=user
     )
 
     # Use the REST Framework's token generator on the new user account
-    token = Token.objects.create(user=nashuser.user)
+    token = Token.objects.create(user=user.user)
     # Return the token to the client
     data = { 'token': token.key }
     return Response(data)

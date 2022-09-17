@@ -1,0 +1,37 @@
+[
+    {
+        "model": "simplynashapi.category",
+        "pk": 1,
+        "fields":{
+            "label": "Breakfast"
+        }
+    },
+    {
+        "model":"simplynashapi.category",
+        "pk":2,
+        "fields":{
+            "label":"Brunch"
+        }
+    },
+    {
+        "model":"simplynashapi.category",
+        "pk":3,
+        "fields":{
+            "label":"Lunch"
+        }
+    },
+    {
+        "model":"simplynashapi.category",
+        "pk":4,
+        "fields":{
+            "label": "Dinner"
+        }
+    },
+    {
+        "model":"simplynashapi.category",
+        "pk":5,
+        "fields":{
+            "label":"Quick Bites"
+        }
+    }
+]

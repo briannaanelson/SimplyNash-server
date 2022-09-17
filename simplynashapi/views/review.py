@@ -22,18 +22,15 @@ class ReviewView(ViewSet):
         serializer.save()
         return Response(serializer.data, status=status.HTTP_201_CREATED)
     
-``
-    
-    
     
     
 class ReviewSerializer(serializers.ModelSerializer):
     class Meta:
         model = Review
-        fields = ('id','restaurant_post','user','content','created_on',
+        fields = ('id','restaurant_post','nashuser','content','created_on',
                   'rating')
 class CreateReviewSerializer(serializers.ModelSerializer):
     class Meta:
         model = Review
-        fields = ('id','restaurant_post','user','content','created_on',
+        fields = ('id','restaurant_post','nashuser','content','created_on',
                   'rating')
