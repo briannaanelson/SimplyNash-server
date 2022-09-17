@@ -17,9 +17,9 @@ class RestaurantPostView(ViewSet):
     
     def list(self, request):
         restaurantposts = RestaurantPost.objects.all()
-        categories = request.query_params.get('type', None)
-        if categories is not None:
-            restaurantposts = restaurantposts.filter(categories_id=categories)
+        category = request.query_params.get('category', None)
+        if category is not None:
+            restaurantposts = restaurantposts.filter(category_id=category)
         serializer = RestaurantPostSerializer(restaurantposts, many=True)
         return Response(serializer.data)
     
