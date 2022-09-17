@@ -3,14 +3,31 @@
         "model":"simplynashapi.restaurantpost",
         "pk":1,
         "fields":{
-            "user": 1,
+            "nashuser": 1,
             "name": "Pearl Diver",
             "publication_date": "2022-09-11",
             "address": "1008 Gallatin Ave",
             "parking": 1,
             "price": 3,
+            "category": 1,
             "image_url": "https://nashvilleguru.com/businesses/pearl-diver",
             "description": "Very cute bar in East Nashville, great drinks!! Food not the best lol"
         }
+    },
+    {
+        "model":"simplynashapi.restaurantpost",
+        "pk":2,
+        "fields":{
+            "nashuser": 1,
+            "name": "Urban Grub",
+            "publication_date": "2022-09-16",
+            "address": "1008 Urban Ave",
+            "parking": 1,
+            "price": 3,
+            "category": 3,
+            "image_url": "https://nashvilleguru.com/businesses/pearl-diver1",
+            "description": "Very cute lunch spot East in 12 South, great drinks!! Food not the best lol"
+        }
+
     }
 ]

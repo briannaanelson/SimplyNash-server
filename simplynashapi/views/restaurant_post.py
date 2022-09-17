@@ -3,29 +3,31 @@ from django.http import HttpResponseServerError
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers, status
+from rest_framework.decorators import action
 from simplynashapi.models import RestaurantPost
-from simplynashapi.models import NashUser
 from simplynashapi.models import Ambiance
 from simplynashapi.models import FoodType
+from django.contrib.auth.models import User
 
 class RestaurantPostView(ViewSet):
     def retrieve(self, request, pk):
-        restaurantpost = RestaurantPost.objects.get(pk=pk)
-        serializer = RestaurantPostSerializer(restaurantpost)
+        restaurantposts = RestaurantPost.objects.get(pk=pk)
+        serializer = RestaurantPostSerializer(restaurantposts)
         return Response(serializer.data)
     
     def list(self, request):
         restaurantposts = RestaurantPost.objects.all()
+        categories = request.query_params.get('type', None)
+        if categories is not None:
+            restaurantposts = restaurantposts.filter(categories_id=categories)
         serializer = RestaurantPostSerializer(restaurantposts, many=True)
         return Response(serializer.data)
     
     def create(self, request):
-        nashuser = NashUser.objects.get(user=request.auth.user)
         serializer = CreateRestaurantPostSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
-        saved_restaurantpost = serializer.save(nashuser=nashuser)
-        response = RestaurantPostSerializer(saved_restaurantpost)
-        return Response(response.data, status=status.HTTP_201_CREATED)
+        serializer.save()
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
     
     def destroy(self, request, pk):
         restaurantpost = RestaurantPost.objects.get(pk=pk)
@@ -80,12 +82,12 @@ class RestaurantPostView(ViewSet):
 class RestaurantPostSerializer(serializers.ModelSerializer):
     class Meta:
         model = RestaurantPost
-        fields = ('id','user','name','publication_date','address','parking','price',
+        fields = ('id','nashuser','name','publication_date','category','address','parking','price',
                 'image_url','description','ambiance','food_type')
-        depth = 2
+        depth = 1
         
 class CreateRestaurantPostSerializer(serializers.ModelSerializer):
     class Meta:
         model = RestaurantPost
-        fields = ('id','user','name','publication_date','address','parking','price',
-                'image_url','description','ambiance','food_type')
+        fields = ('id','nashuser','name','publication_date','category','address','parking','price',
+                'image_url','description')
